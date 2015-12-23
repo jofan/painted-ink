@@ -3,6 +3,9 @@ body {
   padding: 0;
   margin: 0;
 }
+article {
+  overflow: auto;
+}
 .helvetica {
   font-family: helvetica;
 }
@@ -15,80 +18,126 @@ body {
 .palatino {
   font-family: palatino, helvetica, sans-serif;
 }
+/* === SITE HEADER === */
+.site-header {
+  height:40px;
+  margin:0 25px;
+}
+  .site-title {
+    float:left;
+    font-size: 2.5rem;
+    margin-top: 20px;
+    display:none;
+  }
+  .main-menu {
+    float: right;
+    display: none;
+  }
+    .main-menu li {
+      font-family: MiamaRegular, greatesque_brush_scriptRg;
+      font-size:2rem;
+      float:left;
+      list-style: none;
+      padding:10px 25px;
+    }
+      .main-menu a:link, .main-menu a:visited {
+        color:#b2b2b2;
+        text-decoration: none;
+      }
 
-.hero {
-        background: url("content/pen-drawings-of-florence/assets/florence_dome.jpg") no-repeat center center;
-        background-size: cover;
-        height: 80vh; }
-        .hero:before {
-          content: '';
-          position: absolute;
-          top: 0;
-          right: 0;
-          bottom: 0;
-          left: 0;
-          /*background-image: linear-gradient(to bottom right, #002f4b, #dc4225);*/
-          opacity: .8; }
-        .hero .intro {
-          padding: 3rem;
-          position: relative;
-          top: 50%;
-          transform: translateY(-50%); }
-        .hero h1, .hero h2 {
-          background-color: black;
-          color: #fff;
-          font-size: 1.5rem;
-          line-height: 1.5em;
-          letter-spacing: -0.025em;
-          font-weight: 300;
-          text-align: center; }
-        .hero h2 {
-          font-size: 1.3rem;
-        }
-        .hero p {
-          color: #fff;
-          line-height: 1.75em;
-          font-weight: 200;
-          text-align: center;
-          margin-bottom: 2rem; }
-        .hero .tech-img {
-          background: url("http://static.pexels.com/wp-content/uploads/2015/02/apple-hand-iphone-6-4322-525x350.jpg") no-repeat center center;
-          background-size: cover;
-          height: 9rem;
-          width: 9rem;
-          border-radius: 50%;
-          display: block;
-          margin: 0 auto; }
-        @media only screen and (min-width: 40.063em) {
-          .hero .intro {
-            /*padding: 0;*/
-          }
-          .hero .tech-img {
-            height: 18rem;
-            width: 18rem; }
-          .hero h1, .hero h2 {
-            /*padding-top: 4.5rem;*/
-            margin-top: 1rem;
-            margin-bottom: 0;
-            padding:0.5rem 1rem;
-            text-align: right;
-            float: left;
-            clear: both;
-            font-size: 2.5rem; }
-          .hero h2 {
-            font-size: 2.0rem;
-          }
-          .hero p {
-            text-align: right; }
-  .updates {
+/* === COMMENTS === */
+.comments {
+  margin-top:100px;
+}
+
+/* === ARTICLE CONTENT === */
+.l-single-column, .l-two-column {
+  margin:2rem 1rem;
+  overflow: auto;
+}
+  .l-single-column p, .l-two-column p {
+    text-align: justify;
+    font-family: palatino, Georgia,Cambria,"Times New Roman",Times,serif;
+    /*font-weight: 400;*/
+    font-style: normal;
+    font-size: 18px;
+    line-height: 1.28;
+    /*letter-spacing: -0.003em;*/
+  }
+.thumbnail {
+  height: 170px;
+  width: 170px;
+  margin: 0 20px 20px 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  float: left;
+}
+.post-info {
+  color: #b2b2b2;
+  margin-top: 50px;
+}
+
+/* === LARGE SCREENS === */
+@media only screen and (min-width: 40.063em) {
+  .site-header {
+    height:80px;
+    margin:0 50px;
+  }
+    .site-title, .main-menu {
+      display: block;
+    }
+
+  /* === SITE SECONDARY UPDATES === */
+  .secondaries {
     position: absolute;
     width: 250px;
     right: 50px;
     top:100px;
   }
-  .update {
-    background-color: white;
-    height:200px;
-    margin-top:50px;
+    .secondary {
+      background-color: white;
+      height:200px;
+      margin-top:50px;
+    }
+
+  /* === ARTICLE CONTENT === */
+  /*.l-single-column, .l-two-column {
+    margin:3rem 0;
+  }*/
+  .l-single-column, .comments {
+    width: 700px;
+    margin: 0 auto;
   }
+  .comments {
+    margin-top:100px;
+    margin-bottom:100px;
+  }
+    .l-single-column p,
+    .l-two-column p {
+      text-align: justify;
+      font-family: palatino, Georgia,Cambria,"Times New Roman",Times,serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 21px;
+      line-height: 1.58;
+      letter-spacing: -0.003em;
+    }
+  .l-two-column {
+    float: left;
+    width: 46vw;
+    margin-left: 6vw;
+  }
+    .l-main-column {
+      width: 54vw;
+    }
+    .l-lesser-column {
+      width: 30vw;
+    }
+    /*.l-left-column {
+      float: left;
+    }
+    .l-right-column {
+      float: left;
+    }*/
 }
